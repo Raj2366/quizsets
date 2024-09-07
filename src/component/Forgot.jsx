@@ -1,5 +1,6 @@
 import React from "react";
 import "./Forgot.css";
+import { Link } from "react-router-dom";
 
 function Forgot(){
     return(
@@ -18,9 +19,10 @@ function Forgot(){
 
             <button type="submit">SUBMIT</button>
             
+            <Link to="/form"> GOBACK</Link>
         </form>
         </div>
     )
 
 }
-export default Forgot
+export default Forgot;
