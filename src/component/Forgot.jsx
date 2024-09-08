@@ -1,5 +1,5 @@
 import React from "react";
-import "./Forgot.css";
+import './Asset/Forgot.css'
 import { Link } from "react-router-dom";
 
 function Forgot(){

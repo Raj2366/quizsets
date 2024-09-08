@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Link } from 'react-router-dom';
-import './form.css';
+import './Asset/form.css'
 
 function Form() {
     return (

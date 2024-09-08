@@ -1,3 +1,7 @@
+body{
+    background-color: aquamarine;
+}
+
 .container {
     display: flex;
    margin-top: 100px;
