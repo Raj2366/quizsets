@@ -6,7 +6,7 @@ function Signup(){
     return(
         <div className="container">
             <form>
-                <h2>CREATE NEW ACCOUNT</h2>
+                <h2>SIGNUP</h2>
 
                 <label >USER NAME :
                 <input type="text"></input>

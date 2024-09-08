@@ -1,4 +1,8 @@
 /* Center the form and apply a box effect */
+body{
+    background-color: #45a049;
+}
+
 .signup-container {
     display: flex;
     justify-content: center;
