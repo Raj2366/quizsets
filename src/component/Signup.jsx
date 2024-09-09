@@ -14,8 +14,11 @@ function Signup(){
                 <label>PHONE NUMBER :
                 <input type="number"></input>
                 </label>
-                <label>OTP :
-                <input type="number"></input>
+                <label>PASSWORD :
+                <input type="password"></input>
+                </label>
+                <label>EMAIL :
+                <input type="email"></input>
                 </label>
 
                 <button type="sumbit">SIGN UP</button>
