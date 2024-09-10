@@ -22,8 +22,11 @@ function Signup(){
                 </label>
 
                 <button type="sumbit">SIGN UP</button>
-                <p>Already have an account ?</p>
-                <Link to="/form"> LOGIN</Link>
+               <div className="link">
+               <p>Already have an account ?</p>
+               <Link id="log" to="/form"> LOGIN</Link>
+               </div>
+               
             </form>
         </div>
     )
