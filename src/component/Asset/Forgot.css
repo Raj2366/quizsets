@@ -1,5 +1,6 @@
 body{
-    background-color: aquamarine;
+   background-image:image-set("./images/background.jpg");
+   background-size: cover;
 }
 
 .container {
@@ -7,12 +8,12 @@ body{
    margin-top: 100px;
     align-items: center;
     height: 60vh;
-    background-color: #f0f0f0;
+    background-image: image-set("./images/from.avif");
+    
    
 }
 
-.forgot-form {
-    background-color: #fff;
+.form {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -30,13 +31,13 @@ label {
     display: block;
     margin-bottom: 15px;
     font-weight: bold;
-    color: #555;
+    color: black;
 }
 
 button {
     width: 100%;
     padding: 10px;
-    background-color: #007BFF;
+    background-color: green;
     color: white;
     border: none;
     border-radius: 5px;
