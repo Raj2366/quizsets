@@ -1,9 +1,9 @@
-/* Center the form and apply a box effect */
+
 body{
-    background-color: #45a049;
+    background: black;
 }
 
-.signup-container {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,7 +11,7 @@ body{
     background-color: #f2f2f2;
 }
 
-.signup-form {
+.form {
     background-color: white;
     padding: 30px;
     border-radius: 10px;
