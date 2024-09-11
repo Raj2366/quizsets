@@ -1,38 +1,173 @@
-.App {
+/* App.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f5af19, #f12711);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-box {
   text-align: center;
+  animation: fadeIn 2s ease-in-out;
+  position: relative;
+  z-index: 1;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.login {
+  background: #fff;
+  padding: 50px;
+  border-radius: 15px;
+  position: relative;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  max-width: 400px;
+  width: 100%;
+  clip-path: polygon(
+    50% 0%, 
+    100% 25%, 
+    100% 75%, 
+    50% 100%, 
+    0% 75%, 
+    0% 25%
+  );
+  transform: rotate(0deg); /* Rotate for a dynamic effect */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1);
+  animation: textFlow 3s ease-in-out infinite;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+input[type="email"],
+input[type="password"] {
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1em;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  border-color: #f12711;
+  box-shadow: 0 0 10px rgba(241, 39, 17, 0.5);
+  transform: scale(1.02);
+}
+
+input[type="submit"] {
+  background-color: #f12711;
   color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1.2em;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
-.App-link {
-  color: #61dafb;
+input[type="submit"]:hover {
+  background-color: #d6140f;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-@keyframes App-logo-spin {
+p {
+  font-size: 1em;
+  color: #555;
+  margin: 20px 0;
+  animation: fadeIn 2s ease-in-out;
+}
+
+a {
+  text-decoration: none;
+  color: #f12711;
+  font-weight: bold;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+  color: #d6140f;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
   }
+}
+
+@keyframes textFlow {
+  0% {
+    transform: translateX(-20px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-20px);
+    opacity: 0.5;
+  }
+}
+
+@keyframes sprinkle {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.sprinkle {
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  background-color: rgba(239, 251, 9, 0.94);
+  border-radius: 50%;
+  animation: sprinkle 5s linear infinite;
+}
+
+.sprinkle:nth-child(2) {
+  background-color: rgba(255, 0, 0, 0.8);
+  animation-duration: 6s;
+}
+
+.sprinkle:nth-child(3) {
+  background-color: rgba(0, 255, 0, 0.8);
+  animation-duration: 7s;
+}
+
+.sprinkle:nth-child(4) {
+  background-color: rgba(0, 0, 255, 0.8);
+  animation-duration: 8s;
+}
+
+.sprinkle:nth-child(5) {
+  background-color: rgba(249, 12, 201, 0.964);
+  animation-duration: 9s;
 }
