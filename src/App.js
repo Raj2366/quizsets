@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-import {BrowserRouter, Route, Routes } from 'react-router-dom';
-import Login from './Pages/Login';
-import Register from './Pages/Register';
+import react from 'react';
+import {BrowserRouter , Routes ,Route} from 'react-router-dom';
+import Login from './components/Pages/Login';
+import Register from './components/Pages/Register';
+import Navbar from './components/Navbar';
 
 
-function App() {
+export default function App () {
   return (
-    <div >
-    <BrowserRouter>
-
-    <Routes>
-    <Route path='/login' element={<Login/>}/>
-   <Route path='/register' element={<Register/>}/>
-   </Routes>
-  
-    </BrowserRouter>
-  </div>
+    <>
+      <BrowserRouter>
+     <Navbar/>
+     <Routes>
+      <Route path='/login' element={<Login/>}/>
+      <Route path='/register' element={<Register/>}/>
+      </Routes>
+      </BrowserRouter>
+      </>
   );
-}
-
-export default App;
+ }
+ 
